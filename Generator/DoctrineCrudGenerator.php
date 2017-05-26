@@ -246,6 +246,7 @@ class DoctrineCrudGenerator extends Generator
         $this->renderFile('crud/views/show.html.twig.twig', $dir.'/show.html.twig', array(
             'bundle' => $this->bundle->getName(),
             'entity' => $this->entity,
+            'entity_pluralized' => $this->entityPluralized,
             'entity_singularized' => $this->entitySingularized,
             'identifier' => $this->metadata->identifier[0],
             'fields' => $this->metadata->fieldMappings,
@@ -265,6 +266,7 @@ class DoctrineCrudGenerator extends Generator
         $this->renderFile('crud/views/new.html.twig.twig', $dir.'/new.html.twig', array(
             'bundle' => $this->bundle->getName(),
             'entity' => $this->entity,
+            'entity_pluralized' => $this->entityPluralized,
             'entity_singularized' => $this->entitySingularized,
             'route_prefix' => $this->routePrefix,
             'route_name_prefix' => $this->routeNamePrefix,
@@ -285,6 +287,7 @@ class DoctrineCrudGenerator extends Generator
             'route_name_prefix' => $this->routeNamePrefix,
             'identifier' => $this->metadata->identifier[0],
             'entity' => $this->entity,
+            'entity_pluralized' => $this->entityPluralized,
             'entity_singularized' => $this->entitySingularized,
             'fields' => $this->metadata->fieldMappings,
             'bundle' => $this->bundle->getName(),
